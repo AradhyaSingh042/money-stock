@@ -40,7 +40,7 @@ const Stock = () => {
       setIsRefetching(true);
       await axios({
         method: "PUT",
-        url: "http://localhost:3000/api/v1/refreshStockData",
+        url: "http://localhost:3000/api/v1/updateStockData",
       });
       await refetch();
       toast.success("Stock Data Refreshed Successfully", {

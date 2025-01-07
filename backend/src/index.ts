@@ -16,7 +16,7 @@ config();
 
 const prisma = new PrismaClient();
 
-app.put("/api/v1/refreshStockData", async (req, res) => {
+app.put("/api/v1/updateStockData", async (req, res) => {
   try {
     const stockData = await scrapeStockData();
 
