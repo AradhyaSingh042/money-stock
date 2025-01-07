@@ -29,7 +29,7 @@ const Stock = () => {
     queryFn: () => {
       return axios({
         method: "GET",
-        url: "http://localhost:3000/api/v1/fetchStockData",
+        url: "https://money-stock.onrender.com/api/v1/fetchStockData",
         responseType: "json",
       });
     },
@@ -40,7 +40,7 @@ const Stock = () => {
       setIsRefetching(true);
       await axios({
         method: "PUT",
-        url: "http://localhost:3000/api/v1/updateStockData",
+        url: "https://money-stock.onrender.com/api/v1/updateStockData",
       });
       await refetch();
       toast.success("Stock Data Refreshed Successfully", {
