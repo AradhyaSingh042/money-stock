@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model TopGainers {
+  id          String   @id @default(uuid())
+  company     String   @unique
+  high        Float
+  low         Float
+  lastPrice   Float
+  prevClose   Float
+  change      Float
+  percentGain Float?
+  percentLoss Float?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model TopLosers {
+  id          String   @id @default(uuid())
+  company     String   @unique
+  high        Float
+  low         Float
+  lastPrice   Float
+  prevClose   Float
+  change      Float
+  percentGain Float?
+  percentLoss Float?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
