@@ -98,7 +98,7 @@ const Stock = () => {
             <MdRefresh color="#27272A" className="scale-125" />
             {isRefetching ? "Refetching..." : "Refetch"}
           </Button>
-          <Toaster position="bottom-center" />
+          <Toaster position="top-center" />
         </div>
 
         <Table className="mt-5">
