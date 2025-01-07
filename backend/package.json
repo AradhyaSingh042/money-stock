@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "tsc && nodemon ./dist/index.js"
+    "dev": "tsc && nodemon ./dist/index.js",
+    "build": "tsc",
+    "start": "tsc && node ./dist/index.js"
   },
   "dependencies": {
     "@prisma/client": "^6.1.0",
